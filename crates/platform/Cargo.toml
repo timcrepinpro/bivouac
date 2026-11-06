@@ -1,0 +1,18 @@
+[package]
+name = "launcher-platform"
+description = "Tout ce qui dépend du système : registre, chemins, ouverture de protocoles, processus."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+launcher-core.workspace = true
+thiserror.workspace = true
+open = "5"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"
+# Préférence « Effets d'animation » de Windows (PROMPT §11 : réduire les animations).
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"] }
+
+[lints]
+workspace = true

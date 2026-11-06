@@ -1,0 +1,11 @@
+[package]
+name = "launcher-i18n"
+description = "Traductions de l'interface : français par défaut, anglais en second (PROMPT §2.7)."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+toml = "0.9"
+
+[lints]
+workspace = true

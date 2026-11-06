@@ -1,0 +1,19 @@
+[package]
+name = "launcher-ui"
+description = "Interface iced : thème, logo, mode pixel, transitions, pages."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+launcher-core.workspace = true
+launcher-services.workspace = true
+launcher-i18n.workspace = true
+iced = { version = "0.14", features = ["canvas", "image"] }
+iced_wgpu = "0.14"
+
+[target.'cfg(windows)'.dependencies]
+# Boîte de dialogue native « choisir un dossier » (écran « Steam est introuvable »).
+rfd = { version = "0.15", default-features = false }
+
+[lints]
+workspace = true

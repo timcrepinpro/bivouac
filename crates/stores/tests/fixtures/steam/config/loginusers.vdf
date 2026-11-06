@@ -1,0 +1,17 @@
+"users"
+{
+	"76561190000000001"
+	{
+		"AccountName"		"compte_ancien"
+		"PersonaName"		"Ancien"
+		"MostRecent"		"0"
+		"Timestamp"		"1700000000"
+	}
+	"76561190000000002"
+	{
+		"AccountName"		"compte_test"
+		"PersonaName"		"Joueur Test"
+		"MostRecent"		"1"
+		"Timestamp"		"1790000000"
+	}
+}

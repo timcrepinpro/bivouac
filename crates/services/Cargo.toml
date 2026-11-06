@@ -1,0 +1,17 @@
+[package]
+name = "launcher-services"
+description = "Services entre l'interface et le reste : bibliothèque (scan + base), réglages, lancement."
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+launcher-core.workspace = true
+launcher-db.workspace = true
+launcher-stores.workspace = true
+launcher-platform.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+toml = "0.9"
+
+[lints]
+workspace = true

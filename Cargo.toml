@@ -1,0 +1,32 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/i18n", "crates/db", "crates/stores", "crates/platform", "crates/services", "crates/ui", "app"]
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+[workspace.dependencies]
+launcher-core = { path = "crates/core" }
+launcher-db = { path = "crates/db" }
+launcher-stores = { path = "crates/stores" }
+launcher-services = { path = "crates/services" }
+launcher-platform = { path = "crates/platform" }
+launcher-ui = { path = "crates/ui" }
+launcher-i18n = { path = "crates/i18n" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[patch.crates-io]
+# iced_wgpu 0.14.0 avec la passe pixel du launcher (voir vendor/README.md).
+iced_wgpu = { path = "vendor/iced_wgpu" }
